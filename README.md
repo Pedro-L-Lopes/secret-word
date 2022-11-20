@@ -1,4 +1,4 @@
-#Secret Word
+<h1>Secret Word<h1/>
 
 <h2>Game simples de adivinhar palavras, feito com React.<h2/>
 
