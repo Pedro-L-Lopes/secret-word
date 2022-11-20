@@ -23,7 +23,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
       </p>
       <h1>Advinhe a palavra:</h1>
       <h3 className='tip'>
-        Dica <span>{pickedCategory}</span>
+        Dica: <span className='dica'>{pickedCategory}</span>
       </h3>
       <p>Você ainda tem {guesses} tentativa(s).</p>
       <div className="wordContainer">
@@ -36,7 +36,7 @@ const Game = ({verifyLetter, pickedWord, pickedCategory, letters, guessedLetters
         ))}
       </div>
       <div className="letterContainer">
-        <p>Tente advinhar uma letra da palavra: </p>
+        <p>Coloque uma letra: </p>
         <form onSubmit={handleSubmit}>
           <input type="text" name="letter" maxLength="1" required onChange={(e) => setLetter(e.target.value)} value={letter} ref={letterInputRef}/>
           <button>JOGAR</button>

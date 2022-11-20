@@ -2,6 +2,10 @@
     font-size: 2.5em;
 }
 
+.dica{
+    font-size: 1.5em;
+}
+
 .points span {
     font-weight: bold;
 }
@@ -13,14 +17,14 @@
 .wordContainer{
     margin: 1.5em;
     padding: 1.5em;
-    border: 20px solid #ecfa00;
     display: flex;
 }
 
 .letter, .blankSquare{
     font-size: 70px;
     line-height: 1.5;
-    border: 3px solid #000;
+    border: 1px solid #000;
+    border-radius: 2px;
     height: 100px;
     width: 100px;
     text-transform: uppercase;
@@ -45,4 +49,9 @@
     font-size: 2em;
     text-align: center;
     margin-right: 1em;
+    box-shadow: 2px 2px 2px black;
+}
+
+.wrongLettersContainer span{
+    color: #ecfa00;
 }
