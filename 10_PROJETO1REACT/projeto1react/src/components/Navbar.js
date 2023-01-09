@@ -6,6 +6,24 @@ import { useAuthValue } from "../contexts/AuthContext";
 
 import styles from "./Navbar.module.css";
 
+// Icons 
+import homei from '../images/home.png'
+import plusi from '../images/plus.png'
+import dashboardi from '../images/dashboard.png'
+import sairi from '../images/sair.png'
+import infoi from '../images/info.png'
+import useri from '../images/user.png'
+import novoi from '../images/novo-usuario.png'
+
+const home = homei
+const plus = plusi
+const dashboard = dashboardi
+const sair = sairi
+const info = infoi
+const userIcon = useri
+const novo = novoi
+
+
 const Navbar = () => {
   const { user } = useAuthValue();
   const { logout } = useAuthentication()
@@ -22,7 +40,8 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            Home
+            <img className={styles.go} src={home} alt="" />
+            
           </NavLink>
         </li>
         {!user && (
@@ -32,7 +51,7 @@ const Navbar = () => {
                 to="/login"
                 className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                Entrar
+                <img className={styles.go} src={userIcon} alt="" />
               </NavLink>
               </li>
               <li>
@@ -40,7 +59,7 @@ const Navbar = () => {
                 to="/register"
                 className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                Cadastrar
+                <img className={styles.go} src={novo} alt="" />
               </NavLink>
             </li>
           </>
@@ -52,7 +71,7 @@ const Navbar = () => {
                 to="/posts/create"
                 className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                Novo post
+                <img className={styles.go} src={plus} alt="" />
               </NavLink>
               </li>
               <li>
@@ -60,7 +79,7 @@ const Navbar = () => {
                 to="/dashboard"
                 className={({ isActive }) => (isActive ? styles.active : "")}
               >
-                Dashboard
+                <img className={styles.go} src={dashboard} alt="" />
               </NavLink>
             </li>
          </>
@@ -70,12 +89,12 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
-            Sobre
+            <img className={styles.go} src={info} alt="" />
           </NavLink>
         </li>
           {user && (
             <li>
-              <button onClick={logout}>Sair</button>
+              <button onClick={logout}><img className={styles.go} src={sair} alt="" /></button>
             </li>
           )}
       </ul>

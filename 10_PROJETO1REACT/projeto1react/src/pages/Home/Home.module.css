@@ -29,3 +29,9 @@
 .noposts a {
   padding: 10px 25px;
 }
+
+.b{
+  border: none;
+  background-color: transparent;
+  width: 50px;
+}

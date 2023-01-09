@@ -29,7 +29,16 @@
 }
 
 .active {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.011);
   color: #fff;
+  border-radius: 5px;
+}
+
+.go{
+  max-width: 25px;
+}
+
+.go:hover{
+  max-width: 25.5px;
 }
 

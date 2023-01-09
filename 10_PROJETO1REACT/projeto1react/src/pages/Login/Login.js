@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
 import { Link } from "react-router-dom";
 
+import Loading from '../../components/Loading'
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -62,9 +64,7 @@ const Login = () => {
         {!loading && <button className="btn">Entrar</button>}
         <p>Não tem uma conta ? <Link to={'/register'}>Cadastre-se</Link></p>
         {loading && (
-          <button className="btn" disabled>
-            Aguarde...
-          </button>
+          <Loading />
         )}
         {error && <p className="error">{error}</p>}
       </form>
